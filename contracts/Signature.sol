@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.7;
 
-contract Signature {
-    function getMessageHash(address _buyer) public pure returns (bytes32) {
-        return keccak256(abi.encodePacked(_buyer));
+contract sendEmail {
+    function getMessageHash(address _recipient) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked(_recipient));
     }
 
     function getEthSignedMessageHash(bytes32 _messageHash)
